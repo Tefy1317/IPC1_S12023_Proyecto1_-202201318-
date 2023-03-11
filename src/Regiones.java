@@ -5,18 +5,12 @@ public class Regiones {
     private String nombre;
     private double precioespecial;
     private double precioestandar;
-    private JComboBox RegionescomboBox;
-    private JButton registrarRegiónButton;
-    private JButton modificarRegiónButton;
-    private JButton eliminarRegiónButton;
-
-    public Regiones(String codigoregion, String nombre, double precioestandar, double precioespecial){
+    public Regiones(String codigoregion, String nombre, double precioestandar, double precioespecial) {
         this.codigoregion = codigoregion;
         this.nombre = nombre;
         this.precioestandar = precioestandar;
         this.precioespecial = precioespecial;
     }
-
     public void setCodigoregion(String codigoregion) {
         this.codigoregion = codigoregion;
     }
@@ -48,14 +42,15 @@ public class Regiones {
     public double getPrecioestandar() {
         return precioestandar;
     }
-    @Override
-    public String toString(){
-        return "Regiones{"+
-                "Código Región='"+ codigoregion + '\'' +
-                ", Nombre='"+ nombre + '\'' +
-                ", Precio Estándar='"+ precioestandar + '\'' +
-                ", Precio Especial='"+ precioespecial +
-                '}';
 
+   @Override
+    public String toString() {
+        return "Region{" +
+                "Codigo='" + codigoregion + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", precio estandar=" + precioestandar +'\'' +
+                ", precio especial=" + precioespecial+
+                '}';
     }
 }
+

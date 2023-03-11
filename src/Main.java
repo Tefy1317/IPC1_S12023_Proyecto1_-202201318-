@@ -6,13 +6,16 @@ public class Main{
     public static ArrayList<Cliente> clientes = new ArrayList<>();
     public static ArrayList<Kiosco> kioscos = new ArrayList<>();
     public static ArrayList<Regiones> regiones = new ArrayList<>();
+
     public static void main(String[]args){
+
         regiones.add(new Regiones("(M)", "Metropolitana", 35, 25));
         regiones.add(new Regiones("(NT)", "Norte", 68.50, 45.55));
         regiones.add(new Regiones("(NO)", "Nororiente", 58.68, 35.48));
         regiones.add(new Regiones("(SO)", "Suroriente", 38.68, 32.48));
         regiones.add(new Regiones("(SOC)", "Suroccidente", 34.00, 29.00));
         regiones.add(new Regiones("(NOC)", "Noroccidente", 44.50, 40.00));
+
 
         frame = new JFrame("USAC-Delivery");
         frame.setContentPane(new Autenticacion().panelAutenticacion);
@@ -39,5 +42,14 @@ public class Main{
         return false;
     }
 
+    public static boolean evitarregionesrepetidas(String codigoregion){
+        for (Regiones k: regiones){
+
+            if(k.getCodigoregion().equals(codigoregion)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
