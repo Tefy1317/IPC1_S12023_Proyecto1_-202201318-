@@ -119,7 +119,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="eddy"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="fea8d" class="javax.swing.JTextField" binding="textNombre">
@@ -129,7 +129,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="hashhsahsa"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="a84e4" class="javax.swing.JTextField" binding="textApellido">
@@ -139,7 +139,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="jasksajkjsakj"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="cf8d1" class="javax.swing.JTextField" binding="textPassword">
@@ -149,7 +149,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="123"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="93974" class="javax.swing.JTextField" binding="textDPI">
@@ -159,7 +159,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="ahsjsajsahjashj"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="335df" class="javax.swing.JTextField" binding="textFechanacimiento">
@@ -169,7 +169,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1516515616"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="4ab1d" class="javax.swing.JTextField" binding="textalias">
@@ -179,7 +179,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="assaasasas"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="5a5d6" class="javax.swing.JTextField" binding="textTelefono">
@@ -189,7 +189,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="56515615"/>
+          <text value=""/>
         </properties>
       </component>
       <hspacer id="9e042">

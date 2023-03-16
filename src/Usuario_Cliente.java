@@ -34,12 +34,17 @@ public class Usuario_Cliente {
        cotizacionDePaquetesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                /*
                 Main.frame.setContentPane(new Cotizacion().JPanelcotizacion);
                 Main.frame.pack();
+                Main.frame.setSize(600, 800);
+            }
+        });
+        cerrarSesionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main.frame.setContentPane(new Autenticacion().panelAutenticacion);
+                Main.frame.pack();
                 Main.frame.setSize(1000, 1000);
-                */
-
             }
         });
     }

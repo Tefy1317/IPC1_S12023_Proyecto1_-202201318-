@@ -11,8 +11,8 @@ public class Autenticacion {
     private JTextField TextoPassword;
     private JLabel LabelUsuario;
     private JLabel LabelPassword;
-    private String UsuarioAdmin = "admin"; // "ipc1_202201318@ipc1delivery.com";
-    private String PasswordAdmin = "123"; //  "202201318";
+    private String UsuarioAdmin = "ipc1_202201318@ipc1delivery.com";
+    private String PasswordAdmin = "202201318";
 
     //Función Autenticación
 
@@ -83,7 +83,7 @@ public class Autenticacion {
         LabelUsuario.setText("Correo: ");
         panel1.add(LabelUsuario, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         TextoUsuario = new JTextField();
-        TextoUsuario.setText("admin");
+        TextoUsuario.setText("");
         panel1.add(TextoUsuario, new com.intellij.uiDesigner.core.GridConstraints(1, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
         panel1.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(0, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
@@ -107,4 +107,5 @@ public class Autenticacion {
     public JComponent $$$getRootComponent$$$() {
         return panelAutenticacion;
     }
+
 }

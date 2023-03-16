@@ -57,7 +57,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="admin"/>
+              <text value=""/>
             </properties>
           </component>
           <vspacer id="fda20">
@@ -95,7 +95,7 @@
               </grid>
             </constraints>
             <properties>
-              <text value="123"/>
+              <text value=""/>
             </properties>
           </component>
         </children>
