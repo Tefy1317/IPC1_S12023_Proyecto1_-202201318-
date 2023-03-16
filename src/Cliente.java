@@ -6,10 +6,10 @@ public class Cliente {
    private String DPI;
    private String fechadenacimiento;
    private String Genero;
-   private String nacionalidad; //COMBO BOX
+   private String nacionalidad;
    private String alias;
    private int telefono;
-   private String rol; //COMBO BOX
+   private String rol;
 
    public Cliente(String correo, String nombre, String apellido, String passwordcliente, String DPI, String fechadenacimiento, String Genero, String nacionalidad, String alias, int telefono, String rol){
       this.correo = correo;
@@ -84,5 +84,13 @@ public class Cliente {
 
    public int getTelefono() {
       return telefono;
+   }
+
+   public void setRol(String rol) {
+      this.rol = rol;
+   }
+
+   public String getRol() {
+      return rol;
    }
 }

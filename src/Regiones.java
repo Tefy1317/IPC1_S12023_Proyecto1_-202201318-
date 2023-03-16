@@ -2,12 +2,13 @@ import javax.swing.*;
 
 public class Regiones {
     private String codigoregion;
-    private String nombre;
+    private String nombreregion;
     private double precioespecial;
     private double precioestandar;
+    public int numeroenviosregiones = 0 ;
     public Regiones(String codigoregion, String nombre, double precioestandar, double precioespecial) {
         this.codigoregion = codigoregion;
-        this.nombre = nombre;
+        this.nombreregion = nombre;
         this.precioestandar = precioestandar;
         this.precioespecial = precioespecial;
     }
@@ -19,12 +20,12 @@ public class Regiones {
         return codigoregion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreregion(String nombre) {
+        this.nombreregion = nombre;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreregion() {
+        return nombreregion;
     }
 
     public void setPrecioespecial(double precioespecial) {
@@ -47,7 +48,7 @@ public class Regiones {
     public String toString() {
         return "Region{" +
                 "Codigo='" + codigoregion + '\'' +
-                ", nombre='" + nombre + '\'' +
+                ", nombre='" + nombreregion + '\'' +
                 ", precio estandar=" + precioestandar +'\'' +
                 ", precio especial=" + precioespecial+
                 '}';

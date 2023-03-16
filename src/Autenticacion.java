@@ -24,11 +24,11 @@ public class Autenticacion {
                     if (TextoUsuario.getText().equals(UsuarioAdmin) && TextoPassword.getText().equals(PasswordAdmin)) {
                         Main.frame.setContentPane(new Administrador().JPanelAdmin);
                         Main.frame.pack();
-                        Main.frame.setSize(600, 800);
+                        Main.frame.setSize(1000, 1000);
                     } else if (Main.evitarrepetidos(TextoUsuario.getText())) {
-                        Main.frame.setContentPane(new Pantallausuario().JPanePanUsuario);
+                        Main.frame.setContentPane(new Usuario_Cliente().JPanelpantallausuario);
                         Main.frame.pack();
-                        Main.frame.setSize(600, 800);
+                        Main.frame.setSize(1000, 1000);
                     } else {
                         TextoUsuario.setText("");
                         TextoPassword.setText("");
@@ -44,7 +44,7 @@ public class Autenticacion {
             public void actionPerformed(ActionEvent e) {
                 Main.frame.setContentPane(new Registrar().panelRegistrar);
                 Main.frame.pack();
-                Main.frame.setSize(600, 800);
+                Main.frame.setSize(1000, 1000);
             }
         });
     }
@@ -107,5 +107,4 @@ public class Autenticacion {
     public JComponent $$$getRootComponent$$$() {
         return panelAutenticacion;
     }
-
 }

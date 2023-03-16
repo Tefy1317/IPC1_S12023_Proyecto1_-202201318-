@@ -10,7 +10,6 @@ public class Administrador {
     private JButton manejoDeRegionesYButton;
     private JButton manejoDeDepartamentosYButton;
     public JPanel JPanelAdmin;
-    private JComboBox comboBox1;
 
     public Administrador() {
         regresarButton.addActionListener(new ActionListener() {
@@ -36,8 +35,14 @@ public class Administrador {
                 Main.frame.setContentPane(new RegistroRegiones().JPanelRegistroregion);
                 Main.frame.pack();
                 Main.frame.setSize(600, 800);
-                Main.frame.setContentPane(comboBox1);
-
+            }
+        });
+        manejoDeDepartamentosYButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main.frame.setContentPane(new ManejoDepartamentos_Municipios().JPanelDepartamentos_mun);
+                Main.frame.pack();
+                Main.frame.setSize(600, 800);
 
             }
         });

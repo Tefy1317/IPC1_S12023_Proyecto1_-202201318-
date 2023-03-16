@@ -32,4 +32,13 @@ public class Kiosco {
     public String getNombrekiosco() {
         return nombrekiosco;
     }
+
+    @Override
+    public String toString() {
+        return "Kiosco{" +
+                "Código kiosco='" + codigokiosco + '\'' +
+                ", nombre='" + nombrekiosco + '\'' +
+                ", codigo región=" + codigoregion+
+                '}';
+    }
 }

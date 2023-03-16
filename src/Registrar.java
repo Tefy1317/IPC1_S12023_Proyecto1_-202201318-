@@ -18,6 +18,7 @@ public class Registrar {
     private JTextField textTelefono;
     private JComboBox comboBoxRol;
     private JComboBox comboBoxNacionalidad;
+    private JComboBox GenerocomboBox;
 
 
     public Registrar() {
@@ -38,16 +39,25 @@ public class Registrar {
                 }
                 String nacionalidadselect = comboBoxNacionalidad.getSelectedItem().toString();
                 String rolselect = comboBoxRol.getSelectedItem().toString();
-                Main.clientes.add(new Cliente(textCorreo.getText(), textNombre.getText(), textApellido.getText(), textPassword.getText(), textDPI.getText(), textFechanacimiento.getText(), textGenero.getText(), nacionalidadselect, textalias.getText(), Integer.parseInt(textTelefono.getText()), rolselect));
-                JOptionPane.showMessageDialog(null, "USUARIO REGISTRADO CORRECTAMENTE");
-                textCorreo.setText("");
-                textNombre.setText("");
-                textApellido.setText("");
-                textPassword.setText("");
-                textDPI.setText("");
-                textFechanacimiento.setText("");
-                textalias.setText("");
-                textTelefono.setText("");
+                String generoselect = GenerocomboBox.getSelectedItem().toString();
+                Main.clientes.add(new Cliente(textCorreo.getText(), textNombre.getText(), textApellido.getText(), textPassword.getText(), textDPI.getText(), textFechanacimiento.getText(), generoselect, nacionalidadselect, textalias.getText(), Integer.parseInt(textTelefono.getText()), rolselect));
+                if (rolselect.equals("Kiosco")) {
+                    JOptionPane.showMessageDialog(null, "USTED SELECCIONÓ EL ROL KIOSCO, DEBE ASOCIARSE UN KIOSCO");
+                    Main.frame.setContentPane(new Seleccionkiosco().Jpanelselckiosco);
+                    Main.frame.pack();
+                    Main.frame.setSize(900, 300);
+                } else {
+                    JOptionPane.showMessageDialog(null, "USUARIO REGISTRADO CORRECTAMENTE");
+                    textCorreo.setText("");
+                    textNombre.setText("");
+                    textApellido.setText("");
+                    textPassword.setText("");
+                    textDPI.setText("");
+                    textFechanacimiento.setText("");
+                    textalias.setText("");
+                    textTelefono.setText("");
+                }
+
             }
         });
         regresarButton.addActionListener(new ActionListener() {
@@ -55,7 +65,7 @@ public class Registrar {
             public void actionPerformed(ActionEvent e) {
                 Main.frame.setContentPane(new Autenticacion().panelAutenticacion);
                 Main.frame.pack();
-                Main.frame.setSize(600, 800);
+                Main.frame.setSize(1000, 1000);
             }
         });
     }
@@ -117,24 +127,28 @@ public class Registrar {
         label11.setText("Rol:");
         panelRegistrar.add(label11, new com.intellij.uiDesigner.core.GridConstraints(11, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         textCorreo = new JTextField();
+        textCorreo.setText("eddy");
         panelRegistrar.add(textCorreo, new com.intellij.uiDesigner.core.GridConstraints(1, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textNombre = new JTextField();
+        textNombre.setText("hashhsahsa");
         panelRegistrar.add(textNombre, new com.intellij.uiDesigner.core.GridConstraints(2, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textApellido = new JTextField();
+        textApellido.setText("jasksajkjsakj");
         panelRegistrar.add(textApellido, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textPassword = new JTextField();
+        textPassword.setText("123");
         panelRegistrar.add(textPassword, new com.intellij.uiDesigner.core.GridConstraints(4, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textDPI = new JTextField();
-        textDPI.setText("");
+        textDPI.setText("ahsjsajsahjashj");
         panelRegistrar.add(textDPI, new com.intellij.uiDesigner.core.GridConstraints(5, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textFechanacimiento = new JTextField();
+        textFechanacimiento.setText("1516515616");
         panelRegistrar.add(textFechanacimiento, new com.intellij.uiDesigner.core.GridConstraints(6, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
-        textGenero = new JTextField();
-        textGenero.setText("");
-        panelRegistrar.add(textGenero, new com.intellij.uiDesigner.core.GridConstraints(7, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textalias = new JTextField();
+        textalias.setText("assaasasas");
         panelRegistrar.add(textalias, new com.intellij.uiDesigner.core.GridConstraints(9, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         textTelefono = new JTextField();
+        textTelefono.setText("56515615");
         panelRegistrar.add(textTelefono, new com.intellij.uiDesigner.core.GridConstraints(10, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
         panelRegistrar.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
@@ -164,6 +178,13 @@ public class Registrar {
         defaultComboBoxModel2.addElement("Costa Rica");
         comboBoxNacionalidad.setModel(defaultComboBoxModel2);
         panelRegistrar.add(comboBoxNacionalidad, new com.intellij.uiDesigner.core.GridConstraints(8, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        GenerocomboBox = new JComboBox();
+        final DefaultComboBoxModel defaultComboBoxModel3 = new DefaultComboBoxModel();
+        defaultComboBoxModel3.addElement("Femenino");
+        defaultComboBoxModel3.addElement("Masculino");
+        defaultComboBoxModel3.addElement("Prefiero no decirlo");
+        GenerocomboBox.setModel(defaultComboBoxModel3);
+        panelRegistrar.add(GenerocomboBox, new com.intellij.uiDesigner.core.GridConstraints(7, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
     }
 
     /**
@@ -172,4 +193,5 @@ public class Registrar {
     public JComponent $$$getRootComponent$$$() {
         return panelRegistrar;
     }
+
 }

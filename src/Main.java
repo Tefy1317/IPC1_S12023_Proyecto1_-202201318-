@@ -6,6 +6,11 @@ public class Main{
     public static ArrayList<Cliente> clientes = new ArrayList<>();
     public static ArrayList<Kiosco> kioscos = new ArrayList<>();
     public static ArrayList<Regiones> regiones = new ArrayList<>();
+    public static ArrayList<Departamentos> departamentos = new ArrayList<>();
+    public static ArrayList<Municipios> municipios = new ArrayList<>();
+    public static ArrayList<Tarjetas> tarjetas = new ArrayList<>();
+    public static ArrayList<DatosFacturacion> datos = new ArrayList<>();
+
 
     public static void main(String[]args){
 
@@ -22,7 +27,7 @@ public class Main{
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        frame.setSize(600, 700);
+        frame.setSize(1000, 1000);
     }
     //Funcion evitar repetidos
     public static boolean evitarrepetidos(String correo){
@@ -33,7 +38,15 @@ public class Main{
         }
         return false;
     }
-    public static boolean evitarkioscosrepetidos(String codigokiosco){
+    public static boolean evitarkioscosrepetidos(String nombrekiosco){
+        for (Kiosco k: kioscos){
+            if(k.getNombrekiosco().equals(nombrekiosco)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean evitarcodigokioscosrepetidos(String codigokiosco){
         for (Kiosco k: kioscos){
             if(k.getCodigokiosco().equals(codigokiosco)){
                 return true;
@@ -41,11 +54,37 @@ public class Main{
         }
         return false;
     }
-
     public static boolean evitarregionesrepetidas(String codigoregion){
         for (Regiones k: regiones){
 
             if(k.getCodigoregion().equals(codigoregion)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean evitardepartamentosrepetidos(String nombredepartamento){
+        for (Departamentos dep: departamentos){
+
+            if(dep.getNombredepartamento().equals(nombredepartamento)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean evitarmunicipiosrepetidos(String nombremunicipio){
+        for (Municipios mun: municipios){
+
+            if(mun.getNombremunicipio().equals(nombremunicipio)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean evitartarjetasrepetidas(String numerotarjeta){
+        for (Tarjetas t: tarjetas){
+
+            if(t.getNumerotarjeta().equals(numerotarjeta)){
                 return true;
             }
         }
